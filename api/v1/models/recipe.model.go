@@ -4,6 +4,7 @@ import (
 	"time"
 )
 
+// Recipe represents the data about a recipe
 type Recipe struct {
 	ID           string    `json:"id"`
 	Name         string    `json:"name"`

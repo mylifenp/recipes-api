@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mylifenp/recipes-api/models"
+	"github.com/mylifenp/recipes-api/v1/models"
 	"github.com/rs/xid"
 )
 
@@ -20,6 +20,11 @@ func init() {
 	_ = json.Unmarshal([]byte(file), &recipes)
 }
 
+// @Summary list all recipes in the recipes list
+// @ID list-all-recipes
+// @Produce json
+// @Success 200 {object} models.Recipe
+// @Router /recipes [get]
 func ListRecipes(c *gin.Context) {
 	c.JSON(http.StatusOK, recipes)
 }

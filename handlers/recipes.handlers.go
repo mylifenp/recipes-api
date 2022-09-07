@@ -24,7 +24,7 @@ func ListRecipes(c *gin.Context) {
 	c.JSON(http.StatusOK, recipes)
 }
 
-func NewRecipeHandler(c *gin.Context) {
+func NewRecipe(c *gin.Context) {
 	var recipe models.Recipe
 	if err := c.ShouldBindJSON(&recipe); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})

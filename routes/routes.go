@@ -7,7 +7,7 @@ import (
 
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
-	router.GET("/recipes", handlers.ListRecipes)
+	router.POST("/recipes", handlers.NewRecipe)
 	router.GET("/recipes", handlers.ListRecipes)
 	router.PUT("/recipes/:id", handlers.UpdateRecipe)
 	router.DELETE("/recipes/:id", handlers.DeleteRecipe)

@@ -24,7 +24,8 @@ import (
 
 func main() {
 	router := gin.New()
-	v1.Register(router)
+	v1.SetupRecipe(router)
+	v1.SetupTest(router)
 	// router := routes.SetupRouter()
 	// docs.SwaggerInfo.BasePath = "/"
 	// url := ginSwagger.URL("http://localhost:8080/swagger/doc.json")

@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mylifenp/recipes-api/v1/models"
+	"github.com/mylifenp/recipes-api/api/v1/models"
 	"github.com/rs/xid"
 )
 
